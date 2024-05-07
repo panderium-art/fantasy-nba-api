@@ -57,7 +57,6 @@ Reach out to me to obtain credentials to log into Supabase account with the data
 6. Paste it in `.env` file as value of the `DATABASE_URL` key
 7. Replace the `[YOUR-PASSWORD]` with database password(will be provided with credentials)
 
-
 ## Populating .env file
 If you just cloned the project you need to create `.env` file and copy the keys from `.env.example` in it. After that you need to populate these values:
 
@@ -90,7 +89,6 @@ To seed the database you can run one of the following commands:
   `npm run prisma:reset:seed`
 
 
-
 ## Test
 
 ```bash
@@ -103,16 +101,6 @@ $ npm run test:e2e
 # test coverage
 $ npm run test:cov
 ```
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
 
 ## License
 
