@@ -64,6 +64,9 @@ If you just cloned the project you need to create `.env` file and copy the keys 
 - for `JWT_EXPIRES_IN` you can utilize `1h`(dafault value)
 - for `DATABASE_URL` reach out to [Supabase Access](#supabase-access) section
 
+## Postman
+To work with the API you can utilize Postman. In the root folder you can find file `Fantasy-NBA.postman_collection.json` which represents collection of postman requests. Import this collection in postman and you should have seen `Fantasy-NBA` in the left sideabar with collections.
+
 
 ## Swagger
 To access swagger you first need to run:
