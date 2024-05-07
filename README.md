@@ -45,6 +45,52 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
+After running one of these commands server will be up on 3000 port and be accessible via `http://localhost:3000`.
+
+## Supabase Access
+Reach out to me to obtain credentials to log into Supabase account with the database. To obtain database connection string(`DATABASE_URL`) follow next steps:
+1. Log into supabase with provided creds
+2. Selecte `Fantasy-NBA` project
+3. Click on `Connect` button
+4. In the displayed popup select `NodeJS` tab
+5. Copy the connection string
+6. Paste it in `.env` file as value of the `DATABASE_URL` key
+7. Replace the `[YOUR-PASSWORD]` with database password(will be provided with credentials)
+
+
+## Populating .env file
+If you just cloned the project you need to create `.env` file and copy the keys from `.env.example` in it. After that you need to populate these values:
+
+- to generate `JWT_SECRET` you can utilize this [website](https://www.grc.com/passwords.htm). Select this option `63 random alpha-numeric characters (a-z, A-Z, 0-9)`
+- for `JWT_EXPIRES_IN` you can utilize `1h`(dafault value)
+- for `DATABASE_URL` reach out to [Supabase Access](#supabase-access) section
+
+
+## Swagger
+To access swagger you first need to run:
+```bash
+npm start
+# or
+npm run start:dev 
+```
+
+Swagger will be accessible via this route:
+
+`https://localhost:3000/api`
+
+## Seeding the database
+To seed the database you can run one of the following commands:
+
+- to seed database without truncating the tables(add 10 more records to each of the table)
+
+  `npm run prisma:seed`
+
+- to seed database with truncating the tables(remove existing records from the table and after that add 10 records to each table)
+  
+  `npm run prisma:reset:seed`
+
+
+
 ## Test
 
 ```bash
