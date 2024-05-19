@@ -10,11 +10,12 @@ import {
   UseGuards,
 } from '@nestjs/common';
 import { TeamsService } from './teams.service';
-import { ApiOperation, ApiResponse, ApiTags } from '@nestjs/swagger';
+import { ApiBearerAuth, ApiOperation, ApiResponse, ApiTags } from '@nestjs/swagger';
 import { RoleGuard } from 'src/auth/guards/role.guard';
 import { Roles } from 'src/auth/decorators/role.decorator';
 
 @ApiTags('Teams-related endpoints')
+@ApiBearerAuth('JWT-auth')
 @Controller('teams')
 export class TeamsController {
   constructor(private readonly teamsService: TeamsService) {}
@@ -22,7 +23,7 @@ export class TeamsController {
   @Get()
   @ApiOperation({ summary: 'Get all the teams' })
   @ApiResponse({ status: 401, description: 'Unauthorized' })
-  @ApiResponse({ status: 200, description: 'OK', type: 'array' })
+  @ApiResponse({ status: 200, description: 'OK' })
   findAll() {
     return this.teamsService.findAll();
   }

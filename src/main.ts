@@ -16,6 +16,14 @@ async function bootstrap() {
     .setDescription('API is used to manage fantasy NBA teams and players.')
     .setVersion('1.0')
     .addTag('fatansy-nba')
+    .addBearerAuth(
+      {
+        type: 'http',
+        scheme: 'bearer',
+        bearerFormat: 'JWT',
+      },
+      'JWT-auth',
+    )
     .build();
 
   const document = SwaggerModule.createDocument(app, config);
